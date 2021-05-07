@@ -7,26 +7,31 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.caja-padre {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding-left: 8%;
+}
+
 .card {
-    width: 40%;
-    height: 80%;
     background-color: rgba(0, 0, 0, 0.524);
-    border: 2px solid rgba(255, 255, 255, 0.353);
-    margin: 0;
-    position: absolute;
-    top: 10%;
-    left: 29.5%;
+    border-radius: 10px;
+    width: 30%;
+    height: 65%;
 }
 
 .titulo {
     color: rgb(255, 255, 255);
     text-align: center;
+    margin-bottom: 36px;
 }
 
 .formulario {
     color: rgb(255, 255, 255);
     width: 80%;
-    height: 75%;
     display: flex;
     flex-direction: column;
     margin: auto;
@@ -34,6 +39,7 @@ body {
 
 .grupo-input {
     margin-bottom: 15px;
+    position: relative;
 }
 
 .grupo-input1 {
@@ -43,23 +49,43 @@ body {
     position: relative;
 }
 
-input[type="checkbox"] {
-    position: absolute;
-    bottom: 5px;
-    left: 149px;
-}
-
 
 /*Tomar estilo de los inputs de tipo text, email y password*/
 
 input[type="text"],
 input[type="email"],
 input[type="password"] {
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.721);
+    width: 92%;
+    line-height: 170%;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.721);
+    padding-left: 22px;
+    margin-bottom: 10px;
+}
+
+.icons-main {
+    position: absolute;
+    top: 8px;
+    left: 5px;
+    color: #090808;
+    transition: 0.3s;
 }
 
 button {
-    background-color: rgba(255, 255, 255, 0.721);
-    width: 50%;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.721);
+}
+
+@media (max-width: 1024px) {
+    /*ipad pro */
+    .card {
+        width: 80%;
+        left: 9.5%;
+        height: 34%;
+    }
+    button {
+        display: flex;
+        justify-content: center;
+        width: 50%;
+    }
 }
